@@ -25,19 +25,21 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @Table(name = "cliente")
 @EntityListeners(AuditingEntityListener.class)
 @JsonIgnoreProperties(value = {"createdAt", "updateAt"}, allowGetters = true)
-public class Cliente implements Serializable{ //Não digitável, selecionar para gerar automaticamente.
+public class Cliente implements Serializable{
 	
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1076727406377972741L;
+	private static final long serialVersionUID = 6974500157304722126L;
 
+//Não digitável, selecionar para gerar automaticamente.
+	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
 	@NotBlank //Não pode ser em branco
-	private Integer nome;
+	private String nome;
 	
 	@NotNull //Não pode ser vazio
 	private Integer idade;
@@ -72,11 +74,11 @@ public class Cliente implements Serializable{ //Não digitável, selecionar para
 		this.id = id;
 	}
 
-	public Integer getNome() {
+	public String getNome() {
 		return nome;
 	}
 
-	public void setNome(Integer nome) {
+	public void setNome(String nome) {
 		this.nome = nome;
 	}
 
@@ -143,5 +145,6 @@ public class Cliente implements Serializable{ //Não digitável, selecionar para
 }
 
 /*
-show schemas; show tables; use cadastro_cliente; show tables; select * from cliente; describe cliente;
+show schemas; use cadastro_cliente; show tables; select * from cliente; describe cliente;
+Build > Run
 */
