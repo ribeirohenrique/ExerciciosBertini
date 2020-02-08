@@ -1,1 +1,1 @@
-#Primeira Versão
+Exercicios passados em aula.
