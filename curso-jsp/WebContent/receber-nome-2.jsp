@@ -7,13 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-<%= "Nome recebido: " + request.getParameter("nome")%>
-<p/>
-<%= "Contexto: " + request.getContextPath()%>
-<p/>
-<%= "Endereço local: " + request.getLocalAddr()%>
-<p/>
-<%session.getAttribute("curso"); %>
+<%= session.getAttribute("Curso") %>
+<%@ include file="pagina-include.jsp" %> 
 </body>
 </html>

@@ -1,1 +1,0 @@
-Exercicios passados em aula.
