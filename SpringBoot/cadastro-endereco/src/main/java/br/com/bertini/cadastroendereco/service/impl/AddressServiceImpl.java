@@ -30,11 +30,12 @@ public class AddressServiceImpl {
 		return addressRepositoryData.save(addressEntity);
 	}
 
-	public ResponseEntity<?> deleteAddress(String cep){
+	 public ResponseEntity<?> deleteAddress(String cep){
 		
-		AddressEntity addressEntity = Optional.ofNullable(addressRepositoryData.findByCep(cep)).
+		 AddressEntity addressEntity = Optional.ofNullable(addressRepositoryData.findByCep(cep)).
 				orElseThrow(() -> new IllegalArgumentException("Deletado"));
 		
 		return ResponseEntity.ok().body("Deletado");
 	}
+
 }

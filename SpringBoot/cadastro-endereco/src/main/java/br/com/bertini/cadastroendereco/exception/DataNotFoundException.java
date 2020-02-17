@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @ResponseStatus(value = HttpStatus.NOT_FOUND)
 public class DataNotFoundException extends RuntimeException{
 
-	private static final long serialVersionUID = -7705469273172338624L;
+	private static final long serialVersionUID = 7705469273172338624L;
 	
 	private String dataName;
 	private String fieldName;
@@ -42,7 +42,4 @@ public class DataNotFoundException extends RuntimeException{
 		this.fieldValue = filedValue;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
 }
