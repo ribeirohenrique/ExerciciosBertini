@@ -35,14 +35,6 @@ public class DataNotFoundException extends RuntimeException{
 		this.fieldName = fieldName;
 	}
 
-	public Object getFiledValue() {
-		return fieldValue;
-	}
-
-	public void setFiledValue(Object filedValue) {
-		this.fieldValue = filedValue;
-	}
-
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}

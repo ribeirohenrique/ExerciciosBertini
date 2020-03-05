@@ -44,7 +44,7 @@ public class ClienteController {
 		return clienteRepository.findByProfissao(idProfissao);
 	}
 	
-	@PostMapping()
+	@PostMapping() //Requisição
 	public Cliente createCliente(@Valid @RequestBody Cliente cliente) {
 		return clienteRepository.save(cliente);
 	}
