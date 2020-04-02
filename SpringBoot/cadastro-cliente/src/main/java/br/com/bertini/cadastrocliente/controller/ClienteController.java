@@ -65,8 +65,4 @@ public class ClienteController {
 		Cliente clienteAtualizado = clienteRepository.save(clienteData);
 		return clienteAtualizado;
 	}
-	@GetMapping
-	public ResponseEntity<String>hello(){
-		return ResponseEntity.ok().body("<h1> Hello World </h1>");
-	}
 }
